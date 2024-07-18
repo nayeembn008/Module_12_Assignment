@@ -33,7 +33,7 @@
   --bg2: rgba(34, 34, 34, 1);
   --bg3: rgba(48, 48, 48, 0.54);
   --bg4: rgba(255, 255, 255, 0.1);
-  --bg5:
+  /* --bg5: */
   --overlay-teal: rgba(6, 255, 210, 0.5);
   --overlay-red: rgba(255, 0, 0, 0.3);
   --overlay-black: rgba(0, 0, 0, 0.5);
@@ -292,47 +292,172 @@ header {
 }
 
 /* extra mile card style here */
-.extramile{
-    background-color: var(--bg2);
-    border-radius: 16px;
-    padding: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 24px
+.extramile {
+  background-color: var(--bg2);
+  border-radius: 16px;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
 }
 
-.extramile-content{
-    max-width: 443px;
+.extramile-content {
+  max-width: 443px;
 }
 
-.extramile-content .btn-primary{
-    width: 234px;
+.extramile-content .btn-primary {
+  width: 234px;
 }
-.extramile-title{
-    color: var(--text1);
-    margin-bottom: 14px;
-}
-
-.extramile-description{
-    color: var(--text2);
-    margin-bottom: 34px;
+.extramile-title {
+  color: var(--text1);
+  margin-bottom: 14px;
 }
 
-
-.extramile-image{
-    width: 366px;
-    height: 312px;
-    background: url(../images/run-extra-mile.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 16px;
-    background-position: top right;
+.extramile-description {
+  color: var(--text2);
+  margin-bottom: 34px;
 }
 
+.extramile-image {
+  width: 366px;
+  height: 312px;
+  background: url(../images/run-extra-mile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 16px;
+  background-position: top right;
+}
 
-.extramile-image img{
-    max-width: 100%;
+.extramile-image img {
+  max-width: 100%;
+}
+
+/* Meet our team style here */
+.teams {
+  margin-top: 88px;
+  margin-bottom: 88px;
+}
+
+.teams-content {
+  max-width: 670px;
+  margin: 0 auto;
+  margin-bottom: 64px;
+}
+
+.teams-title {
+  color: var(--text1);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.teams-description {
+  color: var(--text2);
+  text-align: center;
+}
+
+.team-cards-container {
+  padding: 20px;
+  background-color: var(--bg4);
+  border-radius: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+  row-gap: 20px;
+}
+.team-member {
+  height: 272px;
+  padding: 16px;
+  border-radius: 18px;
+}
+
+.team-member-title {
+  color: var(--text1);
+  margin-bottom: 4px;
+}
+
+.team-member-designation {
+  color: var(--text2);
+}
+
+.member-1 {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.2) 100%
+    ),
+    url(../images/trainer1.png);
+  background-repeat: none;
+  background-size: cover;
+  order: 1;
+}
+
+.member-2 {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.2) 100%
+    ),
+    url(../images/trainer2.png);
+  background-repeat: none;
+  background-size: cover;
+  order: 2;
+}
+.member-3 {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.2) 100%
+    ),
+    url(../images/trainer3.png);
+  background-repeat: none;
+  background-size: cover;
+  order: 3;
+}
+
+.member-4 {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.2) 100%
+    ),
+    url(../images/trainer4.png);
+  background-repeat: none;
+  background-size: cover;
+  background-position: top center;
+  order: 4;
+}
+
+.member-5 {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.2) 100%
+    ),
+    url(../images/trainer5.png);
+  background-repeat: none;
+  background-size: cover;
+  order: 5;
+}
+
+.member-6 {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.2) 100%
+    ),
+    url(../images/trainer6.png);
+  background-repeat: none;
+  background-size: cover;
+  order: 6;
+}
+
+.team-member-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  height: 100%;
 }
 
 /* Tablet responsive style here */
@@ -368,6 +493,13 @@ header {
   }
   .habit-card {
     margin-bottom: 40px;
+  }
+  .extramile-content {
+    max-width: 263px;
+  }
+  /* Teams style here */
+  .team-cards-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -422,13 +554,37 @@ header {
     grid-template-rows: repeat(4, 1fr);
   }
   /* Extra mile style here */
-  .extramile{
+  .extramile {
     flex-direction: column;
   }
-  .extramile-content .btn-primary{
+  .extramile-content {
+    max-width: 100%;
+  }
+  .extramile-content .btn-primary {
     width: 100%;
-}
-.extramile-image{
+  }
+  .extramile-image {
     width: 100%;
-    height: 170px;}
+    height: 170px;
+  }
+  /* Team style starts here */
+  .team-cards-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .member-hide {
+    display: none;
+  }
+  .member-2 {
+    order: 1;
+  }
+  .member-3 {
+    order: 3;
+  }
+  .member-5 {
+    order: 2;
+  }
+  .member-6 {
+    order: 4;
+  }
 }
