@@ -1,0 +1,434 @@
+/* Font setting */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+@font-face {
+  font-family: Miama;
+  src: url(../font/Miama.ttf);
+}
+
+.inter-font {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+/* Global reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Shared color */
+:root {
+  --text1: rgba(255, 255, 255, 1);
+  --text2: rgba(255, 255, 255, 0.5);
+  --text3: rgba(255, 255, 255, 0.6);
+  --text3: rgba(255, 255, 255, 0.1);
+  --text4: rgba(0, 0, 0, 1);
+  --border1: rgba(255, 255, 255, 0.1);
+  --primary: rgba(230, 83, 60, 1);
+  --bg1: rgba(0, 0, 0, 1);
+  --bg2: rgba(34, 34, 34, 1);
+  --bg3: rgba(48, 48, 48, 0.54);
+  --bg4: rgba(255, 255, 255, 0.1);
+  --bg5:
+  --overlay-teal: rgba(6, 255, 210, 0.5);
+  --overlay-red: rgba(255, 0, 0, 0.3);
+  --overlay-black: rgba(0, 0, 0, 0.5);
+  --overlay-green: rgba(66, 255, 0, 0.3);
+  --overlay-blue: rgba(0, 71, 255, 0.3);
+}
+
+/* Body style here  */
+body {
+  background-color: var(--bg1);
+}
+
+/* Shared font style */
+h1 {
+  font-size: 4.875rem;
+  line-height: 5.85rem;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 3rem;
+  line-height: 3.6rem;
+  font-weight: 900;
+}
+
+h3 {
+  font-size: 2.2rem;
+  line-height: 2.2rem;
+  font-weight: 900;
+}
+
+h4 {
+  font-size: 1.75rem;
+  line-height: 1.87rem;
+  font-weight: 900;
+}
+
+h5 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.3;
+}
+
+h6 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.5px;
+}
+/* Shared button style  */
+.btn-primary {
+  color: var(--text1);
+  background-color: var(--primary);
+  padding: 16px 40px;
+  font-size: 1.125rem;
+  border-radius: 50px;
+  outline: none;
+  border: 1px solid var(--primary);
+  cursor: pointer;
+}
+
+.btn-secondary {
+  color: var(--text1);
+  background-color: var(--bg4);
+  padding: 16px 40px;
+  font-size: 1.125rem;
+  border-radius: 50px;
+  outline: none;
+  border: 1px solid var(--text1);
+  cursor: pointer;
+}
+
+/* Shared global style */
+.container {
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+/* Header style here */
+header {
+  background: linear-gradient(180deg, #111 0%, rgba(119, 119, 119, 0) 100%),
+    #000;
+}
+
+/* Navigation style here */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.navlink-container {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 4px;
+  border-radius: 25px;
+}
+
+.navlinks .navitem {
+  list-style-type: none;
+}
+
+.navlinks {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navlink {
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--text1);
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 25px;
+}
+
+.navlinks .active {
+  background-color: var(--primary);
+  padding: 8px 20px;
+  border-radius: 25px;
+}
+
+.navlink-menu {
+  cursor: pointer;
+  display: none;
+}
+
+/* hero style */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.hero-left {
+  width: 50%;
+}
+
+.hero-title {
+  color: var(--text1);
+  margin-bottom: 24px;
+}
+
+.hero-emphasis {
+  font-family: Miama;
+  font-weight: 100;
+  font-size: 9rem;
+}
+
+.hero-description {
+  color: var(--text2);
+  margin-bottom: 24px;
+}
+
+.hero-btn-container {
+  display: flex;
+  gap: 12px;
+}
+
+.hero-right {
+  position: relative;
+}
+
+.workout,
+.video {
+  position: absolute;
+  border-radius: 12px;
+  border: 1px solid var(--border1);
+  background: var(--bg3);
+  backdrop-filter: blur(10px);
+  padding: 20px 24px;
+}
+
+.video {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  bottom: 64px;
+  left: -100px;
+}
+
+.workout {
+  top: 128px;
+  right: -100px;
+}
+
+.workout-title,
+.video-title {
+  margin-bottom: 3px;
+  color: var(--text1);
+}
+
+.workout-description,
+.video-description {
+  color: var(--text2);
+}
+
+/* Habits styles here */
+.habits {
+  margin-top: 96px;
+  margin-bottom: 96px;
+}
+.habit-content {
+  max-width: 670px;
+  margin: 0 auto;
+  margin-bottom: 64px;
+}
+
+.habit-title {
+  color: var(--text1);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.habit-description {
+  color: var(--text2);
+  text-align: center;
+}
+
+.habit-cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 24px;
+}
+
+.habit-card {
+  max-width: 231px;
+  text-align: center;
+}
+
+.card-image-container {
+  margin-bottom: 32px;
+}
+.card-image-container img {
+  border-radius: 50%;
+  border: 4px solid var(--bg4);
+}
+
+.card-title {
+  color: var(--text1);
+  margin-bottom: 8px;
+}
+
+.card-description {
+  color: var(--text2);
+}
+
+/* extra mile card style here */
+.extramile{
+    background-color: var(--bg2);
+    border-radius: 16px;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px
+}
+
+.extramile-content{
+    max-width: 443px;
+}
+
+.extramile-content .btn-primary{
+    width: 234px;
+}
+.extramile-title{
+    color: var(--text1);
+    margin-bottom: 14px;
+}
+
+.extramile-description{
+    color: var(--text2);
+    margin-bottom: 34px;
+}
+
+
+.extramile-image{
+    width: 366px;
+    height: 312px;
+    background: url(../images/run-extra-mile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 16px;
+    background-position: top right;
+}
+
+
+.extramile-image img{
+    max-width: 100%;
+}
+
+/* Tablet responsive style here */
+@media screen and (max-width: 992px) {
+  .navlink-menu {
+    display: block;
+  }
+  .navlink-container {
+    display: none;
+  }
+  .container {
+    margin: 0 32px;
+  }
+  .hero {
+    flex-direction: column;
+    margin-top: 80px;
+  }
+  .hero-left {
+    width: 100%;
+  }
+  .hero-right {
+    margin-top: 40px;
+  }
+
+  /* Habit style here */
+  .habits {
+    margin-top: 96px;
+    margin-bottom: 96px;
+  }
+  .habit-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+  .habit-card {
+    margin-bottom: 40px;
+  }
+}
+
+/* Mobile responsive style here */
+@media screen and (max-width: 576px) {
+  /* Shared style */
+  h1 {
+    font-size: 2.25rem;
+    line-height: 2.7rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+
+  h3 {
+    font-size: 1.9rem;
+    line-height: 1.9rem;
+  }
+
+  h4 {
+    font-size: 1.134rem;
+    line-height: 1.134rem;
+  }
+
+  /* Hero style */
+  .hero-emphasis {
+    font-size: 5rem;
+  }
+
+  .video {
+    bottom: 250px;
+    left: -50px;
+  }
+
+  .workout {
+    top: 48px;
+    right: -20px;
+  }
+  .workout-description,
+  .video-description {
+    font-size: 0.75rem;
+  }
+  /* Habit style here */
+  .habits {
+    margin-top: 48px;
+    margin-bottom: 48px;
+  }
+  .habit-cards-container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  /* Extra mile style here */
+  .extramile{
+    flex-direction: column;
+  }
+  .extramile-content .btn-primary{
+    width: 100%;
+}
+.extramile-image{
+    width: 100%;
+    height: 170px;}
+}
