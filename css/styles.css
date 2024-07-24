@@ -28,7 +28,7 @@
   --text3: rgba(255, 255, 255, 0.1);
   --text4: rgba(0, 0, 0, 1);
   --border1: rgba(255, 255, 255, 0.1);
-  --primary: rgba(230, 83, 60, 1);
+  --primary: rgb(230, 83, 60);
   --bg1: rgba(0, 0, 0, 1);
   --bg2: rgba(34, 34, 34, 1);
   --bg3: rgba(48, 48, 48, 0.54);
@@ -335,6 +335,7 @@ header {
   justify-content: space-between;
   align-items: center;
   gap: 24px;
+  margin-bottom: 96px;
 }
 
 .extramile-content {
@@ -369,6 +370,20 @@ header {
 }
 
 /* Trainings and exercise */
+.training-content {
+  width: 70%;
+}
+
+.training-title {
+  color: var(--text1);
+  margin-bottom: 16px;
+}
+
+.training-description {
+  color: var(--text2);
+  margin-bottom: 64px;
+}
+
 .training-types {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -691,6 +706,124 @@ header {
   height: 100%;
 }
 
+/* Blog style here */
+.blog-content {
+  width: 70%;
+}
+
+.blog-title {
+  color: var(--text1);
+  margin-bottom: 16px;
+}
+
+.blog-description {
+  color: var(--text2);
+  margin-bottom: 48px;
+}
+
+.blog-cards {
+  display: flex;
+  gap: 24px;
+}
+
+.blog-card {
+  color: var(--text1);
+}
+
+.blog-card > img {
+  width: 100%;
+  margin-bottom: 16px;
+  border-radius: 12px;
+}
+
+.blog-card > h5 {
+  margin-bottom: 8px;
+}
+
+.blog-card > p {
+  color: var(--text2);
+  margin-bottom: 24px;
+}
+
+.btn-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.btn-link img {
+  width: 24px;
+}
+/* Footer style here */
+footer {
+  background-color: var(--bg4);
+  padding-top: 80px;
+  padding-bottom: 24px;
+  margin-top: 80px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 80px;
+}
+
+.footer-company-description {
+  width: 50%;
+}
+.footer-company-description > img {
+  width: 256px;
+  margin-bottom: 20px;
+}
+
+.footer-company-description > p {
+  color: var(--text2);
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.footer-links-container {
+  width: calc(50% - 24px);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-links {
+  color: var(--text1);
+}
+
+.footer-links h5 {
+  margin-bottom: 24px;
+}
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text2);
+  font-size: 20px;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.footer-copyright hr {
+  opacity: 0.3;
+  margin-bottom: 32px;
+}
+
+.footer-copyright > p {
+  font-size: 20px;
+  color: var(--text2);
+  text-align: center;
+  font-weight: 300;
+}
+
 /* Tablet responsive style here */
 @media screen and (max-width: 992px) {
   .navlink-menu {
@@ -761,6 +894,24 @@ header {
   /* Teams style here */
   .team-cards-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Recent blog style here */
+  .blog {
+    margin-top: 80px;
+  }
+  /* Footer content */
+  .footer-content {
+    flex-direction: column;
+  }
+  .footer-company-description {
+    width: 100%;
+  }
+  .footer-links-container {
+    width: 100%;
+  }
+  .footer-links {
+    width: 50%;
   }
 }
 
@@ -865,5 +1016,27 @@ header {
   }
   .member-6 {
     order: 4;
+  }
+
+  /* Recent blog style here*/
+
+  .blog-cards {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  /* Footer */
+  .footer-links-container {
+    flex-direction: column;
+  }
+  .footer-links {
+    margin-bottom: 32px;
+    width: 100%;
+  }
+  .footer-links {
+    margin-bottom: 24px;
+  }
+  .footer-content {
+    margin-bottom: 24px;
   }
 }
