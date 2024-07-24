@@ -89,6 +89,41 @@ p {
   line-height: 1.5rem;
   letter-spacing: 0.5px;
 }
+
+/* Shared input style */
+::placeholder {
+  color: var(--text2);
+}
+
+input[type="text"] {
+  background-color: var(--bg4);
+  color: var(--text2);
+  border: none;
+  outline: none;
+  height: 48px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  display: block;
+}
+
+select {
+  background-color: var(--bg4);
+  color: var(--text2);
+  border: none;
+  outline: none;
+  height: 48px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  display: block;
+  appearance: none;
+  background-image: url(../icons/icon-chevron-down.svg);
+  background-repeat: no-repeat;
+  /* background-size: 1rem; */
+  background-position: calc(100% - 1rem) center;
+}
+
 /* Shared button style  */
 .btn-primary {
   color: var(--text1);
@@ -333,6 +368,202 @@ header {
   max-width: 100%;
 }
 
+/* Trainings and exercise */
+.training-types {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.training-type {
+  height: 200px;
+  padding: 24px;
+  display: flex;
+}
+
+.training-designation {
+  color: var(--text1);
+}
+
+.training-1 {
+  grid-column: span 3;
+  background: linear-gradient(
+      0deg,
+      rgba(6, 255, 210, 0.5) 0%,
+      rgba(6, 255, 210, 0.5) 100%
+    ),
+    url(../images/exercise1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: flex-start;
+  align-items: end;
+}
+
+.training-1 .training-designation {
+  color: var(--text4);
+}
+.training-2 {
+  grid-column: span 6;
+  background: linear-gradient(
+      0deg,
+      rgba(255, 0, 0, 0.3) 0%,
+      rgba(255, 0, 0, 0.3) 100%
+    ),
+    url(../images/exercise2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom bottom;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.training-3 {
+  grid-column: span 3;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    url(../images/exercise3.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.training-4 {
+  grid-column: span 5;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    url(../images/exercise4.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.training-5 {
+  grid-column: span 3;
+  background: linear-gradient(
+      0deg,
+      rgba(66, 255, 0, 0.3) 0%,
+      rgba(66, 255, 0, 0.3) 100%
+    ),
+    url(../images/exercise5.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.training-6 {
+  grid-column: span 4;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 71, 255, 0.3) 0%,
+      rgba(0, 71, 255, 0.3) 100%
+    ),
+    url(../images/exercise6.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+/* BMI calculator style here */
+.BMI-calculation .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 180px;
+}
+
+.BMI {
+  margin-top: 88px;
+  margin-bottom: 88px;
+}
+.BMI-content-container {
+  max-width: 670px;
+  margin: 0 auto;
+}
+
+.BMI-title {
+  color: var(--text1);
+  margin-bottom: 14px;
+}
+
+.BMI-description {
+  color: var(--text2);
+}
+
+.BMI-calculation {
+  background-color: var(--bg2);
+  margin-top: 88px;
+  padding-top: 52px;
+  padding-bottom: 52px;
+}
+
+.BMI-chart-title {
+  color: var(--text1);
+  margin-bottom: 52px;
+}
+
+.BMI-chart-table {
+  width: 310px;
+}
+
+.BMI-chart-table,
+.BMI-chart-table th,
+.BMI-chart-table td {
+  border: 1px solid var(--border1);
+  text-align: left;
+  padding: 12px 24px;
+  border-collapse: collapse;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text2);
+}
+
+.BMI-chart-table th {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text1);
+}
+
+.BMI-calculate {
+  width: 100%;
+}
+
+.BMI-calculate-content {
+  margin-bottom: 32px;
+}
+
+.BMI-calculate-title {
+  color: var(--text1);
+  margin-bottom: 14px;
+}
+
+.BMI-calculate-description {
+  color: var(--text2);
+}
+
+.form-inputs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+#activity {
+  grid-column: span 2;
+}
+
+#calculate {
+  margin-top: 32px;
+}
+
 /* Meet our team style here */
 .teams {
   margin-top: 88px;
@@ -497,6 +728,36 @@ header {
   .extramile-content {
     max-width: 263px;
   }
+  /* Training and exercise */
+  .training-5 {
+    background-position: top center;
+  }
+
+  .training-4 {
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+  /* BMI style here */
+  .BMI-content-container {
+    max-width: 595px;
+    margin: 0 32px;
+  }
+
+  .BMI-calculation {
+    margin-top: 48px;
+  }
+  .BMI-calculation .container {
+    flex-direction: column;
+  }
+
+  .BMI-chart-table {
+    width: 100%;
+  }
+
+  .BMI-calculation .container {
+    gap: 64px;
+  }
+
   /* Teams style here */
   .team-cards-container {
     grid-template-columns: repeat(2, 1fr);
@@ -530,12 +791,10 @@ header {
   .hero-emphasis {
     font-size: 5rem;
   }
-
   .video {
     bottom: 250px;
     left: -50px;
   }
-
   .workout {
     top: 48px;
     right: -20px;
@@ -567,11 +826,31 @@ header {
     width: 100%;
     height: 170px;
   }
+
+  /* Tranings and exercise styles here */
+  .training-hide {
+    display: none;
+  }
+
+  .training-1 {
+    grid-column: span 6;
+  }
+  .training-2 {
+    grid-column: span 6;
+    background-position: top center;
+  }
+
+  .training-4 {
+    grid-column: span 5;
+  }
+  .training-5 {
+    grid-column: span 7;
+  }
+
   /* Team style starts here */
   .team-cards-container {
     grid-template-columns: repeat(1, 1fr);
   }
-
   .member-hide {
     display: none;
   }
