@@ -723,11 +723,12 @@ header {
 
 .blog-cards {
   display: flex;
-  gap: 24px;
+  gap: 2%;
 }
 
 .blog-card {
   color: var(--text1);
+  width: 49%;
 }
 
 .blog-card > img {
@@ -737,7 +738,7 @@ header {
 }
 
 .blog-card > h5 {
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .blog-card > p {
@@ -900,6 +901,11 @@ footer {
   .blog {
     margin-top: 80px;
   }
+
+  .blog-card {
+    width: 100%;
+  }
+
   /* Footer content */
   .footer-content {
     flex-direction: column;
@@ -1019,6 +1025,9 @@ footer {
   }
 
   /* Recent blog style here*/
+  .blog-content {
+    width: 100%;
+  }
 
   .blog-cards {
     flex-direction: column;
@@ -1026,6 +1035,10 @@ footer {
   }
 
   /* Footer */
+  .footer-company-description {
+    margin-bottom: 32px;
+  }
+
   .footer-links-container {
     flex-direction: column;
   }
